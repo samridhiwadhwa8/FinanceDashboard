@@ -1,13 +1,13 @@
-# 💰 Financial Dashboard
+# Financial Dashboard
 
 A modern and interactive **financial dashboard** built with React to help users track income, expenses, and savings with clear insights and visualizations.
 This project focuses on **clean UI, structured state management, and practical feature implementation**.
 
 ---
 
-# 🚀 Features
+# Features
 
-## 📊 Financial Summary (Top Section)
+## Financial Summary (Top Section)
 
 * **Total Balance** – Current available funds
 * **Total Income** – Earnings (salary, deposits)
@@ -17,7 +17,7 @@ This project focuses on **clean UI, structured state management, and practical f
 
 ---
 
-## 📋 Transactions (Detail Section)
+##  Transactions (Detail Section)
 
 * View all transactions with:
 
@@ -26,7 +26,7 @@ This project focuses on **clean UI, structured state management, and practical f
   * Category
   * Type (Income / Expense)
 
-### 🔍 Functionality
+###  Functionality
 
 * Search transactions
 * Filter by category, type, and date
@@ -36,7 +36,7 @@ This project focuses on **clean UI, structured state management, and practical f
 
 ---
 
-## 📈 Insights (Insights Section)
+##  Insights (Insights Section)
 
 * Highest spending category
 * Monthly comparison
@@ -46,37 +46,37 @@ This project focuses on **clean UI, structured state management, and practical f
 
 ---
 
-## 📊 Data Visualizations
+## Data Visualizations
 
-### ⏱️ Time-Based
+### Time-Based
 
 * Line chart showing income/expense trends
 
-### 🥧 Categorical
+###  Categorical
 
 * Pie/Donut chart showing category-wise spending
 
 ---
 
-## 🔐 Role-Based UI (Frontend Simulation)
+## Role-Based UI (Frontend Simulation)
 
-### 👀 Viewer
+### Viewer
 
 * Read-only access
 * Can view data and charts
 
-### 🔑 Admin
+### Admin
 
 * Add transactions
 * Edit/Delete transactions
 
-### 🔄 Role Switching
+### Role Switching
 
 * Dropdown toggle (frontend only)
 
 ---
 
-## 🌙 Dark Mode
+## Dark Mode
 
 * Smooth theme toggle
 * Clean black UI
@@ -84,14 +84,14 @@ This project focuses on **clean UI, structured state management, and practical f
 
 ---
 
-## 💾 Data Persistence
+## Data Persistence
 
 * Stored using `localStorage`
 * Data persists after refresh
 
 ---
 
-## 📤 Export Feature
+## Export Feature
 
 * Export transactions as:
 
@@ -100,21 +100,21 @@ This project focuses on **clean UI, structured state management, and practical f
   * PDF
 ---
 
-## 🎬 Animations
+## Animations
 
 * Implemented using **Framer Motion**
 * Smooth UI transitions
 
 ---
 
-## 🔌 Mock Data
+## Mock Data
 
 * Static JSON dataset
 * Easily replaceable with real APIs
 
 ---
 
-# 🧠 Technology Stack
+# Technology Stack
 
 * **Frontend:** React 18
 * **Styling:** Tailwind CSS
@@ -126,7 +126,7 @@ This project focuses on **clean UI, structured state management, and practical f
 
 ---
 
-# 🧱 Project Structure
+# Project Structure
 
 ```
 financial-dashboard/
@@ -158,7 +158,7 @@ financial-dashboard/
 
 ---
 
-# 🔄 State Management
+# State Management
 
 Centralized using **Context API**
 
@@ -171,7 +171,7 @@ User Action → State Update → UI Re-render
 
 ---
 
-# 🎯 Key Features Explained
+# Key Features Explained
 
 ## Financial Summary
 
@@ -193,14 +193,14 @@ User Action → State Update → UI Re-render
 
 ---
 
-# 📱 Responsiveness
+# Responsiveness
 
 * Fully responsive layout
 * Mobile-friendly design
 
 ---
 
-# ⚠️ Assumptions
+# Assumptions
 
 * Static/mock data used
 * No backend integration
@@ -208,7 +208,7 @@ User Action → State Update → UI Re-render
 
 ---
 
-# 🧪 Edge Case Handling
+# Edge Case Handling
 
 * Empty state → No transactions available
 * Safe filtering
@@ -216,7 +216,7 @@ User Action → State Update → UI Re-render
 
 ---
 
-# 🏆 Enhancements
+# Enhancements
 
 * Dark mode
 * Local storage persistence
@@ -226,7 +226,7 @@ User Action → State Update → UI Re-render
 
 ---
 
-# 📦 Installation
+# Installation
 
 ## Prerequisites
 
@@ -251,7 +251,7 @@ npm run build
 
 ---
 
-# 💬 Approach
+# Approach
 
 The dashboard is divided into three layers:
 
@@ -261,7 +261,7 @@ The dashboard is divided into three layers:
 
 ---
 
-# 🧠 Learning Outcomes
+# Learning Outcomes
 
 * Context API state management
 * Dashboard UI design
@@ -269,7 +269,7 @@ The dashboard is divided into three layers:
 
 ---
 
-# 📌 Future Enhancements
+# Future Enhancements
 
 * Backend integration
 * Authentication system
@@ -277,7 +277,5 @@ The dashboard is divided into three layers:
 * ML-based predictions
 
 ---
-
-# 👩‍💻 Author
 
 Built as part of an evaluation assignment focusing on clean UI and structured implementation.
