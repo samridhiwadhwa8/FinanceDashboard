@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
-import { TrendingUp, TrendingDown, AlertTriangle, Target, Calendar, DollarSign, PiggyBank, ShoppingCart, Utensils, Car, Zap, Home, CreditCard } from 'lucide-react';
+import { TrendingUp, TrendingDown, AlertTriangle, Target, Calendar, PiggyBank, ShoppingCart } from 'lucide-react';
 
-const SmartInsights = ({ transactions, monthlyData }) => {
+const SmartInsights = ({ transactions }) => {
   const insights = useMemo(() => {
     const currentMonth = new Date().getMonth();
     const currentYear = new Date().getFullYear();
@@ -110,6 +110,17 @@ const SmartInsights = ({ transactions, monthlyData }) => {
       const avgWeeklySpending = weekSpendingArray.reduce((sum, amount) => sum + amount, 0) / weeks.length;
       const highestWeekSpending = Math.max(...weekSpendingArray);
       
+      generatedInsights.push({
+        type: 'pattern',
+        icon: Calendar,
+        title: 'Weekly Spending Summary',
+        value: `Avg ₹${Math.round(avgWeeklySpending).toLocaleString('en-IN')}`,
+        amount: highestWeekSpending,
+        description: `Avg weekly spending ₹${Math.round(avgWeeklySpending).toLocaleString('en-IN')}, highest week ₹${Math.round(highestWeekSpending).toLocaleString('en-IN')}`,
+        color: 'text-orange-600',
+        bgColor: 'bg-orange-50'
+      });
+
       // Check if most spending happens on weekends
       const weekendSpending = currentMonthTransactions.filter(t => {
         const day = new Date(t.date).getDay();
@@ -125,7 +136,7 @@ const SmartInsights = ({ transactions, monthlyData }) => {
           title: 'Weekend Spending Pattern',
           value: `${((weekendSpending / currentMonthTotal) * 100).toFixed(1)}%`,
           amount: weekendSpending,
-          description: `Most expenses happen on weekends (${((weekendSpending / currentMonthTotal) * 100).toFixed(1)}% of weekend spending)`,
+          description: `Most expenses happen on weekends (${((weekendSpending / currentMonthTotal) * 100).toFixed(1)}%)`,
           color: 'text-orange-600',
           bgColor: 'bg-orange-50'
         });
@@ -204,19 +215,7 @@ const SmartInsights = ({ transactions, monthlyData }) => {
       savingsRate,
       insights: generatedInsights
     };
-  }, [transactions, monthlyData]);
-
-  const getCategoryIcon = (category) => {
-    const iconMap = {
-      'Food': Utensils,
-      'Travel': Car,
-      'Shopping': ShoppingCart,
-      'Bills': Home,
-      'Entertainment': Zap,
-      'Healthcare': CreditCard
-    };
-    return iconMap[category] || DollarSign;
-  };
+  }, [transactions]);
 
   const getInsightIcon = (type) => {
     const iconMap = {

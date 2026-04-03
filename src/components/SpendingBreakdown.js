@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 const SpendingBreakdown = ({ transactions }) => {
   const categoryBreakdown = useMemo(() => {
@@ -14,16 +14,6 @@ const SpendingBreakdown = ({ transactions }) => {
       amount,
       transactions: expenses.filter(t => t.category === category).length
     })).sort((a, b) => b.amount - a.amount);
-  }, [transactions]);
-
-  const subCategoryData = useMemo(() => {
-    const expenses = transactions.filter(t => t.type === 'expense');
-    return expenses.map(t => ({
-      date: t.date,
-      category: t.category,
-      amount: t.amount,
-      description: t.description
-    }));
   }, [transactions]);
 
   const COLORS = ['#6366f1', '#8b5cf6', '#ec4899', '#f59e0b', '#10b981', '#ef4444', '#06b6d4', '#f97316'];

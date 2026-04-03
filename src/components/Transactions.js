@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { Search, Plus, Calendar, ArrowUpCircle, ArrowDownCircle, SortAsc, SortDesc, Edit, Trash2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { Search, Plus, ArrowUpCircle, ArrowDownCircle, SortAsc, SortDesc, Edit, Trash2 } from 'lucide-react';
 import { categories } from '../data/mockData';
 import { useAppContext } from '../context/AppContext';
 
